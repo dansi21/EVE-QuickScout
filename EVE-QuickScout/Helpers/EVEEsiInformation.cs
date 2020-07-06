@@ -49,8 +49,6 @@ namespace EVE_QuickScout
 
         public async Task<SystemInfo> SearchSystemName(string searchSystem) {
 
-
-            Console.WriteLine("Test");
             EsiResponse<ESI.NET.Models.Universe.IDLookup> searchResults = await client.Universe.IDs(new List<string>() { searchSystem });
             if (searchResults.Data.Systems.Count == 0)
                 return null;
@@ -66,15 +64,25 @@ namespace EVE_QuickScout
                 if(temp.Moons != null)
                     moonCount += temp.Moons.Count();
             }
+            toReturn.SystemID = SystemData.Data.SystemId;
             toReturn.SystemName = SystemData.Data.Name;
             toReturn.Planets = SystemData.Data.Planets.Count();
             toReturn.Moons = moonCount;
             toReturn.Belts = beltCount;
-            
+            toReturn.secStatus = Decimal.Ceiling(SystemData.Data.SecurityStatus);
 
-            //toReturn.Moons
+            EsiResponse<List<ESI.NET.Models.Universe.Kills>> systemKills = await client.Universe.Kills();
 
-            //searchResults.Data.Systems[0].Name
+            foreach (var temp in systemKills.Data) {
+                if (temp.SystemId == SystemData.Data.SystemId) {
+                    toReturn.Kills = temp.ShipKills + temp.PodKills;
+                    toReturn.NPCKills = temp.NpcKills;
+                }
+
+            }
+
+            //systemKills.Data.Find()
+
             return toReturn;
         }
 

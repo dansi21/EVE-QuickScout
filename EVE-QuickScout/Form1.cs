@@ -41,6 +41,8 @@ namespace EVE_QuickScout
                 label2.Text = "Planets: " + results.Planets.ToString();
                 label3.Text = "Moons: " + results.Moons.ToString();
                 label4.Text = "Belts: " + results.Belts.ToString();
+                label5.Text = "Kills: " + results.Kills.ToString();
+                label6.Text = "NPC Kills: " + results.NPCKills.ToString();
             }
         }
     }

@@ -8,10 +8,13 @@ namespace EVE_QuickScout
 {
     class SystemInfo
     {
+        public int SystemID;
         public string SystemName;
         public int Planets;
         public int Belts;
         public int Moons;
-        public string secStatus;
+        public Decimal secStatus;
+        public int Kills;
+        public int NPCKills;
     }
 }

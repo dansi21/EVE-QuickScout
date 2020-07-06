@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVE-QuickScout", "EVE-QuickScout\EVE-QuickScout.csproj", "{03C82571-6B98-4BE0-949E-9EEFECB77110}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03C82571-6B98-4BE0-949E-9EEFECB77110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03C82571-6B98-4BE0-949E-9EEFECB77110}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03C82571-6B98-4BE0-949E-9EEFECB77110}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03C82571-6B98-4BE0-949E-9EEFECB77110}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5AE9C66E-FFE3-4818-93E8-942CE15B5EA9}
+	EndGlobalSection
+EndGlobal
